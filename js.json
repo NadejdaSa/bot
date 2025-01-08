@@ -1,0 +1,12 @@
+[
+    {"model": "vocabulary", "pk": 1, "fields": {"russian_word": "Мир", "english_word": "Peace"}},
+    {"model": "vocabulary", "pk": 2, "fields": {"russian_word": "Она", "english_word": "She"}},
+    {"model": "vocabulary", "pk": 3, "fields": {"russian_word": "Море", "english_word": "Sea"}},
+    {"model": "vocabulary", "pk": 4, "fields": {"russian_word": "Соль", "english_word": "Salt"}},
+    {"model": "vocabulary", "pk": 5, "fields": {"russian_word": "Душа", "english_word": "Soul"}},
+    {"model": "vocabulary", "pk": 6, "fields": {"russian_word": "Прекрасная", "english_word": "Beautiful"}},
+    {"model": "vocabulary", "pk": 7, "fields": {"russian_word": "Опасная", "english_word": "Dangerous"}},
+    {"model": "vocabulary", "pk": 8, "fields": {"russian_word": "Солнце", "english_word": "Sun"}},
+    {"model": "vocabulary", "pk": 9, "fields": {"russian_word": "Жизнь", "english_word": "Life"}},
+    {"model": "vocabulary", "pk": 10, "fields": {"russian_word": "Фильм", "english_word": "Movie"}}
+]
