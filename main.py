@@ -6,6 +6,7 @@ import random
 import Model
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import default_state, State, StatesGroup
+import os
 
 class CommandWord:
     ADD_WORD = 'Добавить слово ➕'
@@ -13,7 +14,7 @@ class CommandWord:
     NEXT = 'Дальше ⏭'
 
 # Вместо BOT TOKEN HERE нужно вставить токен вашего бота, полученный у @BotFather
-BOT_TOKEN = '' #заполнить
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN") #заполнить
 # Создаем объекты бота и диспетчера
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
