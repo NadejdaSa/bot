@@ -3,6 +3,7 @@ from sqlalchemy.orm import declarative_base, relationship
 
 Base = declarative_base()
 
+
 class Users(Base):
     __tablename__ = "users"
 
@@ -10,17 +11,19 @@ class Users(Base):
 
     def __str__(self):
         return f'Users{self.id}'
-    
+
+
 class Vocabulary(Base):
     __tablename__ = "vocabulary"
 
     id = sq.Column(sq.Integer, primary_key=True)
-    russian_word = sq.Column(sq.String(length=50),unique=True)
-    english_word = sq.Column(sq.String(length=50),unique=True)
+    russian_word = sq.Column(sq.String(length=50), unique=True)
+    english_word = sq.Column(sq.String(length=50), unique=True)
 
     def __str__(self):
-        return f'Vocabulary{self.id}: ({self.russian_word}, {self.english_word})'
-    
+        return f'Vocabulary{self.id}: {self.russian_word}, {self.english_word}'
+
+
 class Words_for_users(Base):
     __tablename__ = "words_for_users"
 
@@ -32,8 +35,10 @@ class Words_for_users(Base):
     vocabulary = relationship(Vocabulary, backref="Words_for_users")
 
     def __str__(self):
-        return f'Words_for_users{self.id}: ({self.id_users},{self.id_vocabulary})'
+        return f'Words_for_users{self.id}: {self.id_users}, {self.id_vocabulary}'
 
-def create_tables(engine):
-    Base.metadata.drop_all(engine)
+
+def create_tables(engine, drop=False):
+    if drop:
+        Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
